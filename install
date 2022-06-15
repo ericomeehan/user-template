@@ -62,7 +62,7 @@ log "installing user | userId={{ $USER_ID }}"
 for policy in $(ls $userSource/policies)
 do
 	log "installing user policy | policy={{ $policy }}"
-	.$userSource/policies/$policy/install		\
+	bash $userSource/policies/$policy/install	\
 		--executionId $executionId		\
 		--groupId $groupId			\
 		--installationId $installationId	\
